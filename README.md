@@ -11,17 +11,33 @@ vi /etc/yum.repos.d/mongodb-org-4.4.repo
 
 
 yum install mongodb-org
+
+
 mongo --version
 
 2. Add disk Data mongodb
+
+
 mkdir -p /data/mongodb
+
+
 chown mongod:mongod /data/mongodb/
 
 3. Add Key Security
+
+
 mkdir /etc/mongodb/
+
+
 openssl rand -base64 741 >/etc/mongodb/mongodb.key
+
+
 chmod 600 /etc/mongodb/mongodb.key
+
+
 chown -R mongod:mongod /etc/mongodb/
+
+
 
 => copy key to 2 node #
 scp /etc/mongodb/mongodb.key user@node2:~/
