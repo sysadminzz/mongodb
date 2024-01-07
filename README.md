@@ -7,7 +7,7 @@
 
 
 
-#1. Add repo & install mongodb
+# 1. Add repo & install mongodb
 
 
 vi /etc/yum.repos.d/mongodb-org-4.4.repo
@@ -20,7 +20,7 @@ mongo --version
 
 
 
-2. Add disk Data mongodb
+# 2. Add disk Data mongodb
 
 
 mkdir -p /data/mongodb
@@ -30,7 +30,7 @@ chown mongod:mongod /data/mongodb/
 
 
 
-3. Add Key Security
+# 3. Add Key Security
 
 
 mkdir /etc/mongodb/
@@ -65,7 +65,7 @@ chmod 600 /etc/mongodb/mongodb.key
 
 
 
-4. Config mongodb
+# 4. Config mongodb
 
 
 vi /etc/mongod.conf
@@ -87,7 +87,7 @@ systemctl status mongod.service
 
 
 
-5. Create user & db mongo cluster
+# 5. Create user & db mongo cluster
 
 
 
