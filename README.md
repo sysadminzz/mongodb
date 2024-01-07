@@ -1,7 +1,10 @@
-# SETUP CLUSTER MONGODB REPLICATION 3 NODE USE KEY SECURITY
+# Setup Cluster Mongodb Replication 3 Node Use Key Security
 
 # Add hosts 3 node mongodb
+
+
 ![Screenshot 2024-01-08 at 00 50 36](https://github.com/sysadminzz/mongodb/assets/152803356/a4e69313-544d-4db5-9775-8fbbfc71e54d)
+
 
 
 1. Add repo & install mongodb
@@ -15,6 +18,8 @@ yum install mongodb-org
 
 mongo --version
 
+
+
 2. Add disk Data mongodb
 
 
@@ -22,6 +27,8 @@ mkdir -p /data/mongodb
 
 
 chown mongod:mongod /data/mongodb/
+
+
 
 3. Add Key Security
 
@@ -56,6 +63,8 @@ chown -R mongod:mongod  /etc/mongodb
 
 chmod 600 /etc/mongodb/mongodb.key
 
+
+
 4. Config mongodb
 
 
@@ -76,7 +85,11 @@ systemctl start mongod.service
 
 systemctl status mongod.service
 
+
+
 5. Create user & db mongo cluster
+
+
 
 mongo --host 127.0.0.1 --port 27017
 
