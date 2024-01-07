@@ -1,11 +1,13 @@
 # SETUP CLUSTER MONGODB REPLICATION 3 NODE USE KEY SECURITY
 
 # Add hosts 3 node mongodb
-![Screenshot 2024-01-08 at 00 45 49](https://github.com/sysadminzz/mongodb/assets/152803356/accc5008-be61-40ff-b19e-fc867e5f8374)
+![Screenshot 2024-01-08 at 00 50 36](https://github.com/sysadminzz/mongodb/assets/152803356/a4e69313-544d-4db5-9775-8fbbfc71e54d)
 
 
 1. Add repo & install mongodb
 vi /etc/yum.repos.d/mongodb-org-4.4.repo
+
+
 yum install mongodb-org
 mongo --version
 
