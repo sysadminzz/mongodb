@@ -7,7 +7,7 @@
 
 
 
-1. Add repo & install mongodb
+#1. Add repo & install mongodb
 
 
 vi /etc/yum.repos.d/mongodb-org-4.4.repo
