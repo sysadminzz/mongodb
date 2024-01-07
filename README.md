@@ -40,36 +40,71 @@ chown -R mongod:mongod /etc/mongodb/
 
 
 => copy key to 2 node #
+
+
 scp /etc/mongodb/mongodb.key user@node2:~/
+
+
 mkdir /etc/mongodb/
+
+
 mv /home/vagrant/mongodb.key /etc/mongodb/
+
+
 chown -R mongod:mongod  /etc/mongodb
+
+
 chmod 600 /etc/mongodb/mongodb.key
 
 4. Config mongodb
+
+
 vi /etc/mongod.conf
+
+
 vi /usr/lib/systemd/system/mongodb.service
+
+
 => systemctl daemon-reload
+
+
 systemctl enable mongod.service
+
+
 systemctl start mongod.service
+
+
 systemctl status mongod.service
 
 5. Create user & db mongo cluster
+
 mongo --host 127.0.0.1 --port 27017
+
 rs.initiate() 
+
 use admin 
-db.createUser({
-  user: "admin",
-  pwd: "mongoPassDemo", 
-  roles: [{ role: "root", db: "admin" }]
-})
+![Screenshot 2024-01-08 at 00 54 22](https://github.com/sysadminzz/mongodb/assets/152803356/62ceb31c-f548-4e29-ba07-be840a623b48)
+
+
 
 => Config Mongo Shell by user admin:
+
+
 mongo --host node1:27017 --username admin --password  --authenticationDatabase admin
+
+
 Add Node:
+
+
 rs.status() 
+
+
 rs.add("node2:27017")
+
+
 rs.add("node3:27017")
+
+
 rs.status() 
 
 
