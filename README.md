@@ -1,9 +1,8 @@
 # SETUP CLUSTER MONGODB REPLICATION 3 NODE USE KEY SECURITY
 
 # Add hosts 3 node mongodb
-192.168.100.10	node1
-192.168.100.11	node2
-192.168.100.12	node3
+![Screenshot 2024-01-08 at 00 45 49](https://github.com/sysadminzz/mongodb/assets/152803356/accc5008-be61-40ff-b19e-fc867e5f8374)
+
 
 1. Add repo & install mongodb
 vi /etc/yum.repos.d/mongodb-org-4.4.repo
